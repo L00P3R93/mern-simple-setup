@@ -2,11 +2,24 @@
 	"name": "mern-simple-setup",
 	"version": "1.0.0",
 	"description": "A simple setup to verify MERN setup",
-	"main": "index.js",
-	"repository": "https://github.com/L00P3R93/mern-simple-setup.git",
 	"author": "sntaks",
 	"license": "MIT",
 	"private": false,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/L00P3R93/mern-simple-setup.git"
+	},
+	"homepage": "https://github.com/L00P3R93/mern-simple-setup",
+	"main": "template.js",
+	"scripts": {
+		"development": "nodemon",
+		"build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
+		"start": "NODE_ENV=production node ./dist/server.generated.js"
+	},
+	"engines": {
+		"node": "12.22.9",
+    	"npm": "8.5.1"
+	},
 	"dependencies": {
 		"@hot-loader/react-dom": "16.13.0",
 		"express": "4.17.1",
